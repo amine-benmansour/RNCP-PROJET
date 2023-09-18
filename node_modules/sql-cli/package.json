@@ -1,0 +1,64 @@
+{
+  "name": "sql-cli",
+  "author": "Muhammad Hasan Khan",
+  "version": "0.6.2",
+  "description": "Cross platform command line interface for SQL Server",
+  "tags": [
+    "sql",
+    "cli"
+  ],
+  "keywords": [
+    "node",
+    "azure",
+    "cli",
+    "sql"
+  ],
+  "main": "./lib/cli.js",
+  "preferGlobal": true,
+  "engines": {
+    "node": ">= 4.6"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "chardet": "^0.1.0",
+    "commander": "^2.9.0",
+    "easy-table": "^1.0.0",
+    "iconv-lite": "^0.4.13",
+    "mssql": "^3.3.0",
+    "mstring": "^0.1.2",
+    "password-prompt": "^1.0.2",
+    "q": "^2.0.3",
+    "sprintf-js": "^1.0.3",
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.3.4",
+    "ya-csv": "^0.9.4"
+  },
+  "homepage": "https://github.com/hasankhan/sql-cli",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hasankhan/sql-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hasankhan/sql-cli/issues"
+  },
+  "scripts": {
+    "prepublishOnly": "crlf --set=LF bin/mssql",
+    "test": "npm -s run-script jshint && npm -s run-script unit",
+    "jshint": "jshint lib",
+    "unit": "jasmine-node test"
+  },
+  "bin": {
+    "mssql": "./bin/mssql"
+  },
+  "devDependencies": {
+    "crlf": "^1.1.0",
+    "jasmine-node": "~1.14.3",
+    "jshint": "~2.5.1",
+    "proxyquire": "~1.0.0"
+  }
+}
